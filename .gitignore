@@ -3,6 +3,7 @@ config.js
 
 #VS Studio code
 settings.json
+**/.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
