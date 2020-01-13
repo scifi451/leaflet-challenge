@@ -1,12 +1,25 @@
 // Store our API endpoint inside queryUrl
-var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson";
+var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
 
 // Perform a GET request to the query URL
 d3.json(queryUrl, function(data) {
   // Once we get a response, send the data.features object to the createFeatures function
 //   createFeatures(data.features)
-  console.log(data);
+  console.log(data.features);
+
+  var magArray = []
+  for (var i = 0; i < data.length; i++) {
+    var features = data[i].features.properties;
+    console.log(features)
+    if (features) {
+      magArray.push([features.properties[0]])
+    }
+    console.log(magArray)
+  }
+
 });
+
+
 
 // function createFeatures(earthquakeData) {
 
