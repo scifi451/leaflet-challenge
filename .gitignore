@@ -1,6 +1,9 @@
 #Config file
 config.js
 
+#DS Store
+**/.DS_store
+
 #VS Studio code
 settings.json
 **/.vscode
